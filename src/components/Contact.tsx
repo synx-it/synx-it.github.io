@@ -2,12 +2,10 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
+
 import { t, SupportedLocale } from "../i18n";
 import { Linkedin } from "lucide-react";
-import { toast } from "sonner";
+
 
 interface ContactProps {
   locale: SupportedLocale;
@@ -40,7 +38,7 @@ const Contact: React.FC<ContactProps> = ({ locale }) => {
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     await new Promise((resolve) => setTimeout(resolve, 1000));
     console.log(values);
-    toast.success(t(locale, "contact.thankYou"));
+    
     form.reset();
   };
 
@@ -65,11 +63,11 @@ const Contact: React.FC<ContactProps> = ({ locale }) => {
               >
                 {t(locale, "contact.namePlaceholder")}
               </label>
-              <Input
+              <input
                 id="name"
                 {...register("name")}
                 placeholder={t(locale, "contact.namePlaceholder")}
-                className="w-full"
+                className="w-full bg-white rounded border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary-light text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
               />
               {errors.name && (
                 <p className="text-red-500 text-sm mt-1">
@@ -84,12 +82,12 @@ const Contact: React.FC<ContactProps> = ({ locale }) => {
               >
                 {t(locale, "contact.emailPlaceholder")}
               </label>
-              <Input
+              <input
                 id="email"
                 type="email"
                 {...register("email")}
                 placeholder={t(locale, "contact.emailPlaceholder")}
-                className="w-full"
+                className="w-full bg-white rounded border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary-light text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
               />
               {errors.email && (
                 <p className="text-red-500 text-sm mt-1">
@@ -104,27 +102,28 @@ const Contact: React.FC<ContactProps> = ({ locale }) => {
               >
                 {t(locale, "contact.messagePlaceholder")}
               </label>
-              <Textarea
+              <textarea
                 id="message"
                 {...register("message")}
                 placeholder={t(locale, "contact.messagePlaceholder")}
-                className="w-full min-h-[150px]"
-              />
+                className="w-full bg-white rounded border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary-light h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+                rows={5}
+              ></textarea>
               {errors.message && (
                 <p className="text-red-500 text-sm mt-1">
                   {errors.message.message}
                 </p>
               )}
             </div>
-            <Button
+            <button
               type="submit"
-              className="w-full bg-[var(--primary)] text-white hover:bg-[var(--tertiary)] transition-colors text-lg py-3 rounded-full"
+              className="w-full text-white bg-primary border-0 py-2 px-6 focus:outline-none hover:bg-tertiary rounded text-lg disabled:bg-gray-400"
               disabled={isSubmitting}
             >
               {isSubmitting
                 ? t(locale, "contact.sending")
-                : t(locale, "contact.button")}
-            </Button>
+                : t(locale, "contact.sendMessage")}
+            </button>
             <p className="text-sm text-gray-500 mt-4 text-center">
               {t(locale, "contact.privacy")}
             </p>

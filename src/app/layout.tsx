@@ -3,8 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import Providers from "./providers";
-import { Toaster } from "@/components/ui/toaster";
-import { Toaster as Sonner } from "@/components/ui/sonner";
+
 import Script from "next/script";
 
 const inter = Inter({
@@ -35,8 +34,7 @@ export default function RootLayout({
       >
         <Providers>
           {children}
-          <Toaster />
-          <Sonner />
+
         </Providers>
 
         {/* Cookiebot */}

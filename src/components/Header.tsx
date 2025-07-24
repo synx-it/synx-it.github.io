@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
+
 import { t, SupportedLocale } from "../i18n";
 
 interface HeaderProps {
@@ -48,9 +48,9 @@ const Header: React.FC<HeaderProps> = ({ locale }) => {
               {t(locale, "header.contact")}
             </a>
           </nav>
-          <Button asChild className="bg-[var(--primary)] text-white hover:bg-[var(--tertiary)] font-medium transition-colors text-base rounded-full px-6 py-2">
-            <a href="#contact">{t(locale, "header.cta")}</a>
-          </Button>
+          <a href="#contact" className="bg-primary text-white hover:bg-tertiary font-medium transition-colors text-base rounded-full px-6 py-2">
+            {t(locale, "header.cta")}
+          </a>
         </div>
       </div>
     </header>

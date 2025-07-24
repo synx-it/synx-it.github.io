@@ -8,12 +8,27 @@ export const translations = {
   it,
 };
 
+type Translations = {
+  [key: string]: string | Translations;
+};
+
 export function t(locale: SupportedLocale, key: string): string {
   const keys = key.split('.');
-  let value: any = translations[locale];
-  for (const k of keys) {
-    value = value?.[k];
-    if (!value) return key;
+  const localeTranslations: Translations = translations[locale];
+
+  const value = keys.reduce<string | Translations | undefined>(
+    (acc, currentKey) => {
+      if (acc && typeof acc === 'object' && acc[currentKey]) {
+        return acc[currentKey];
+      }
+      return undefined;
+    },
+    localeTranslations
+  );
+
+  if (typeof value === 'string') {
+    return value;
   }
-  return value;
+
+  return key;
 }

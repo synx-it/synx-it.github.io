@@ -1,7 +1,7 @@
 import React from 'react';
 import type { SupportedLocale } from '../i18n';
 import { t } from '../i18n';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+
 import { Globe } from 'lucide-react';
 
 const LANGUAGES = [
@@ -23,16 +23,15 @@ const Footer: React.FC<FooterProps> = ({ locale, setLocale }) => {
         </div>
         <div className="flex items-center gap-2">
           <Globe className="w-5 h-5 text-gray-500" />
-          <Select onValueChange={(value) => setLocale(value as SupportedLocale)} defaultValue={locale}>
-            <SelectTrigger className="w-[120px] border-gray-300">
-              <SelectValue placeholder={t(locale, 'footer.selectLanguage')} />
-            </SelectTrigger>
-            <SelectContent>
-              {LANGUAGES.map(lang => (
-                <SelectItem key={lang.code} value={lang.code}>{lang.label}</SelectItem>
-              ))}
-            </SelectContent>
-          </Select>
+          <select
+            value={locale}
+            onChange={(e) => setLocale(e.target.value as SupportedLocale)}
+            className="w-[120px] bg-white border border-gray-300 rounded-md py-1 px-2 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary-light focus:border-primary"
+          >
+            {LANGUAGES.map(lang => (
+              <option key={lang.code} value={lang.code}>{lang.label}</option>
+            ))}
+          </select>
         </div>
       </div>
     </footer>

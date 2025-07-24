@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { t, SupportedLocale } from '../i18n';
-import { Button } from "@/components/ui/button";
+
 
 interface HeroProps {
   locale: SupportedLocale;
@@ -28,11 +28,9 @@ const Hero: React.FC<HeroProps> = ({ locale = 'en' }) => {
         <p className="text-xl md:text-2xl font-light max-w-3xl mx-auto mb-8">
           {t(locale, 'hero.description')}
         </p>
-        <Button asChild size="lg" className="mt-8 bg-[var(--primary)] text-white hover:bg-[var(--tertiary)] transition-colors font-semibold text-lg px-10 py-3 rounded-full">
-          <a href="#case-studies">
-            {t(locale, 'hero.cta')}
-          </a>
-        </Button>
+        <a href="#case-studies" className="mt-8 bg-primary text-white hover:bg-tertiary transition-colors font-semibold text-lg px-10 py-3 rounded-full">
+          {t(locale, 'hero.cta')}
+        </a>
       </div>
     </section>
   );
