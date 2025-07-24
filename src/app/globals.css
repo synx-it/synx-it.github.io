@@ -1,5 +1,17 @@
 @import "tailwindcss";
 
+@layer utilities {
+  .bg-primary {
+    background-color: var(--primary);
+  }
+  .bg-tertiary {
+    background-color: var(--tertiary);
+  }
+  .hover\:bg-tertiary:hover {
+    background-color: var(--tertiary);
+  }
+}
+
 html {
   scroll-behavior: smooth;
 }

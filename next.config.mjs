@@ -1,8 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     output: 'export',
-    basePath: '/synx-web',
-    trailingSlash: true,
+    basePath: '/website',
     images: {
         unoptimized: true,
     },

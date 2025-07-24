@@ -37,7 +37,8 @@
     "nameRequired": "Il nome è obbligatorio.",
     "emailRequired": "L'email è obbligatoria.",
     "emailInvalid": "Indirizzo email non valido.",
-    "messageRequired": "Il messaggio è obbligatorio."
+    "messageRequired": "Il messaggio è obbligatorio.",
+    "sendMessage": "Invia Messaggio"
   },
   "footer": {
     "synx": "SynX",
