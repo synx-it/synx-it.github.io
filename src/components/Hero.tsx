@@ -12,7 +12,7 @@ const Hero: React.FC<HeroProps> = ({ locale = 'en' }) => {
     <section className="relative h-screen flex items-center justify-center text-white">
       <div className="absolute inset-0 z-0">
         <Image
-          src="/0e0eec45-d359-4338-98e7-562ad6638e9f.png"
+          src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/0e0eec45-d359-4338-98e7-562ad6638e9f.png`}
           alt="Hero Background"
           fill
           style={{ objectFit: "cover" }}

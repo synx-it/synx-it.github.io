@@ -24,7 +24,7 @@ const Header: React.FC<HeaderProps> = ({ locale }) => {
         <div className="flex items-center">
           <div className="relative h-16 w-40"> {/* Container for the logo */}
             <Image
-              src="/logo_bg.png"
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/logo_bg.png`}
               alt="SynX Logo"
               fill
               sizes="160px"
