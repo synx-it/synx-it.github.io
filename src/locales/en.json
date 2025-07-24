@@ -1,0 +1,60 @@
+{
+  "hero": {
+    "title": "Empowering Healthcare, Accelerating Discovery",
+    "description": "SynX leverages advanced AI and machine learning to transform complex biomedical data into actionable insights, driving innovation in research, diagnostics, and patient care. Partner with us to unlock the full potential of your data and accelerate biomedical breakthroughs.",
+    "cta": "Discover Our Solutions"
+  },
+  "header": {
+    "caseStudies": "Case Studies",
+    "contact": "Contact",
+    "cta": "Get Started"
+  },
+  "caseStudies": {
+    "title": "Case Studies",
+    "description": "Explore how we've helped our partners overcome challenges and achieve their goals through innovative AI solutions.",
+    "study1": {
+      "title": "Predictive Analytics in Drug Discovery",
+      "description": "Accelerated drug discovery timelines by 30% for a leading pharmaceutical company using predictive modeling."
+    },
+    "study2": {
+      "title": "AI-Powered Diagnostic Imaging",
+      "description": "Improved diagnostic accuracy by 25% in a clinical setting through our advanced image analysis platform."
+    },
+    "study3": {
+      "title": "Genomic Data Interpretation",
+      "description": "Enabled a biotech startup to identify novel biomarkers by interpreting complex genomic datasets."
+    }
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "description": "Interested in collaborating, learning more, or requesting a demo? Fill out the form below or connect with us directly. We’re excited to help you advance biomedical innovation!",
+    "namePlaceholder": "Your Name",
+    "emailPlaceholder": "Your Email Address",
+    "messagePlaceholder": "How can we help you?",
+    "button": "Contact Us",
+    "privacy": "We respect your privacy. Your information will only be used to respond to your inquiry.",
+    "thankYou": "Thank you for reaching out! We'll get back to you soon.",
+    "nameRequired": "Name is required.",
+    "emailRequired": "Email is required.",
+    "emailInvalid": "Invalid email address.",
+    "messageRequired": "Message is required."
+  },
+  "footer": {
+    "synx": "SynX",
+    "vision": "Transforming complex data into strategic insights through advanced AI solutions.",
+    "mission": "Our vision: Accelerate biomedical innovation, empower researchers, and improve patient outcomes worldwide.",
+    "quickLinks": "Quick Links",
+    "missionLink": "Mission",
+    "contactLink": "Contact",
+    "topLink": "Top",
+    "contactTitle": "Contact",
+    "phone": "Phone",
+    "linkedin": "LinkedIn",
+    "twitter": "Twitter",
+    "legal": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "rights": "All Rights Reserved.",
+    "selectLanguage": "Select language"
+  }
+}

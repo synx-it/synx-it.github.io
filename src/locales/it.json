@@ -1,0 +1,60 @@
+{
+  "hero": {
+    "title": "Potenziare la Sanità, Accelerare la Scoperta",
+    "description": "SynX sfrutta l'intelligenza artificiale avanzata e il machine learning per trasformare dati biomedici complessi in insight azionabili, guidando l'innovazione nella ricerca, nella diagnostica e nella cura del paziente. Collabora con noi per sbloccare tutto il potenziale dei tuoi dati e accelerare le scoperte biomediche.",
+    "cta": "Scopri le Nostre Soluzioni"
+  },
+  "header": {
+    "caseStudies": "Casi di Studio",
+    "contact": "Contatto",
+    "cta": "Inizia Ora"
+  },
+  "caseStudies": {
+    "title": "Casi di Studio",
+    "description": "Scopri come abbiamo aiutato i nostri partner a superare le sfide e raggiungere i loro obiettivi attraverso soluzioni IA innovative.",
+    "study1": {
+      "title": "Analisi Predittiva nella Scoperta di Farmaci",
+      "description": "Accelerazione delle tempistiche di scoperta dei farmaci del 30% per un'azienda farmaceutica leader utilizzando modelli predittivi."
+    },
+    "study2": {
+      "title": "Diagnostica per Immagini Potenziata dall'IA",
+      "description": "Miglioramento dell'accuratezza diagnostica del 25% in ambito clinico attraverso la nostra piattaforma avanzata di analisi delle immagini."
+    },
+    "study3": {
+      "title": "Interpretazione dei Dati Genomici",
+      "description": "Abbiamo permesso a una startup biotech di identificare nuovi biomarcatori interpretando complessi set di dati genomici."
+    }
+  },
+  "contact": {
+    "title": "Contattaci",
+    "description": "Vuoi collaborare, saperne di più o richiedere una demo? Compila il modulo qui sotto o contattaci direttamente. Siamo entusiasti di aiutarti ad avanzare nell'innovazione biomedica!",
+    "namePlaceholder": "Il tuo nome",
+    "emailPlaceholder": "Il tuo indirizzo email",
+    "messagePlaceholder": "Come possiamo aiutarti?",
+    "button": "Invia Messaggio",
+    "privacy": "Rispettiamo la tua privacy. Le tue informazioni saranno utilizzate solo per rispondere alla tua richiesta.",
+    "thankYou": "Grazie per averci contattato! Ti risponderemo al più presto.",
+    "nameRequired": "Il nome è obbligatorio.",
+    "emailRequired": "L'email è obbligatoria.",
+    "emailInvalid": "Indirizzo email non valido.",
+    "messageRequired": "Il messaggio è obbligatorio."
+  },
+  "footer": {
+    "synx": "SynX",
+    "vision": "Trasformiamo dati complessi in insight strategici grazie a soluzioni IA avanzate.",
+    "mission": "La nostra visione: accelerare l'innovazione biomedica, potenziare i ricercatori e migliorare gli esiti per i pazienti in tutto il mondo.",
+    "quickLinks": "Collegamenti Rapidi",
+    "missionLink": "Missione",
+    "contactLink": "Contatto",
+    "topLink": "Inizio Pagina",
+    "contactTitle": "Contatto",
+    "phone": "Telefono",
+    "linkedin": "LinkedIn",
+    "twitter": "Twitter",
+    "legal": "Legale",
+    "privacy": "Privacy Policy",
+    "terms": "Termini di Servizio",
+    "rights": "Tutti i diritti riservati.",
+    "selectLanguage": "Seleziona lingua"
+  }
+}
