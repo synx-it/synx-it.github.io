@@ -14,9 +14,6 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Synx AI Vision",
   description: "The description for Synx AI Vision",
-  icons: {
-    icon: "/favicon.png",
-  },
 };
 
 export default function RootLayout({
