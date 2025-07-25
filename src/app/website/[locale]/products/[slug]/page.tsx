@@ -20,7 +20,7 @@ export async function generateStaticParams() {
 export default async function ArticlePage({
   params,
 }: {
-  params: { slug: string; locale: SupportedLocale };
+  params: Promise<{ slug: string; locale: SupportedLocale }>;
 }) {
   const { locale, slug } = await params;
   const article = await getArticle("products", slug, locale);
