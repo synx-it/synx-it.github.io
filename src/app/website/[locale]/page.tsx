@@ -2,7 +2,16 @@ import { getSortedArticles } from "@/lib/articles";
 import Hero from "@/components/Hero";
 import CaseStudies from "@/components/CaseStudies";
 import Contact from "@/components/Contact";
-import type { SupportedLocale } from "@/i18n";
+import { i18n, type SupportedLocale } from "@/i18n";
+
+// Generate static params for all supported locales
+export function generateStaticParams() {
+  return i18n.locales.map((locale) => ({
+    locale,
+  }));
+}
+
+export const dynamicParams = false; // No fallback: 404 for unknown locales
 
 // This is a server component that fetches data
 async function HomePageContent({ locale }: { locale: SupportedLocale }) {

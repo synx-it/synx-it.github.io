@@ -1,14 +1,13 @@
 import { getArticle, getSortedArticles, markdownToHtml } from "@/lib/articles";
 import { notFound } from "next/navigation";
-import { SupportedLocale } from "@/i18n";
+import { i18n, type SupportedLocale } from "@/i18n";
 
 export async function generateStaticParams() {
-  const locales: SupportedLocale[] = ["en", "it"];
   const paths = await Promise.all(
-    locales.map(async (locale) => {
+    (i18n.locales as SupportedLocale[]).map(async (locale) => {
       const articles = await getSortedArticles("products", locale);
       return articles.map((article) => ({
-        locale: locale,
+        locale,
         slug: article.slug,
       }));
     })
@@ -16,6 +15,8 @@ export async function generateStaticParams() {
 
   return paths.flat();
 }
+
+export const dynamicParams = false; // No fallback: 404 for unknown locales
 
 export default async function ArticlePage({
   params,
