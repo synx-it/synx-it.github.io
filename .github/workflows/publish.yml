@@ -40,8 +40,8 @@ jobs:
           # Create .nojekyll file to prevent Jekyll processing
           touch out/.nojekyll
           
-          # Create a simple 404.html for GitHub Pages
-          echo '<!DOCTYPE html><html><head><meta http-equiv="refresh" content="0; url=/website/404"></head><body>Redirecting...</body></html>' > out/404.html
+          # Create a simple 404.html that doesn't cause redirect loops
+          echo '<!DOCTYPE html><html><head><title>Page Not Found</title><style>body{font-family:sans-serif;text-align:center;padding:2rem;}</style></head><body><h1>404 - Page Not Found</h1><p>The page you are looking for does not exist.</p></body></html>' > out/404.html
           
           # List the contents of the out directory for debugging
           echo "Contents of out directory:"
