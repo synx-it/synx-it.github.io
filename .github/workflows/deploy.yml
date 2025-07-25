@@ -35,7 +35,10 @@ jobs:
       - name: Build with Next.js
         run: |
           npm run build
+          # Create .nojekyll file to prevent Jekyll processing
           touch ./out/.nojekyll
+          # Create a simple 404.html for GitHub Pages
+          echo '<!DOCTYPE html><html><head><meta http-equiv="refresh" content="0; url=/404"></head><body>Redirecting...</body></html>' > ./out/404.html
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
