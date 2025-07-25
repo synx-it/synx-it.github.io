@@ -31,12 +31,18 @@ jobs:
 
       - name: Build with Next.js 🏗️
         run: |
-          # Ensure the output directory exists
-          mkdir -p out
+          # Set environment to production for the build
+          echo "NODE_ENV=production" >> $GITHUB_ENV
+          
           # Run the build
           npm run build
+          
           # Create .nojekyll file to prevent Jekyll processing
           touch out/.nojekyll
+          
+          # Create a simple 404.html for GitHub Pages
+          echo '<!DOCTYPE html><html><head><meta http-equiv="refresh" content="0; url=/website/404"></head><body>Redirecting...</body></html>' > out/404.html
+          
           # List the contents of the out directory for debugging
           echo "Contents of out directory:"
           ls -la out/
