@@ -34,6 +34,9 @@ jobs:
           # Set environment to production for the build
           echo "NODE_ENV=production" >> $GITHUB_ENV
           
+          # Install dependencies
+          npm ci
+          
           # Run the build
           npm run build
           
@@ -43,8 +46,8 @@ jobs:
           # Create a simple 404.html that doesn't cause redirect loops
           echo '<!DOCTYPE html><html><head><title>Page Not Found</title><style>body{font-family:sans-serif;text-align:center;padding:2rem;}</style></head><body><h1>404 - Page Not Found</h1><p>The page you are looking for does not exist.</p></body></html>' > out/404.html
           
-          # List the contents of the out directory for debugging
-          echo "Contents of out directory:"
+          # Verify the build output
+          echo "Build completed. Contents of out directory:"
           ls -la out/
 
       - name: Upload artifact 📡

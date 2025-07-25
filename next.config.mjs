@@ -1,12 +1,15 @@
 /** @type {import('next').NextConfig} */
 const isProd = process.env.NODE_ENV === 'production';
-const basePath = isProd ? '/website' : '';
+// Deploy to root of GitHub Pages site
+const basePath = '';
+const assetPrefix = '';
 
 const nextConfig = {
   output: 'export',
   reactStrictMode: true,
-  basePath: basePath,
-  assetPrefix: basePath ? `${basePath}/` : '',
+  // Remove basePath for root deployment
+  basePath,
+  assetPrefix,
   
   // Ensure images are handled correctly in static export
   images: {
@@ -21,7 +24,7 @@ const nextConfig = {
     // Add support for static export
     config.output = {
       ...config.output,
-      publicPath: `${basePath}/_next/`,
+      publicPath: '/_next/',
     };
     return config;
   },
