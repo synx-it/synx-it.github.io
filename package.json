@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build"
+    "build": "next build && next export"
   },
   "dependencies": {
     "@formatjs/intl-localematcher": "^0.6.1",
