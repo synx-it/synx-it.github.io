@@ -4,6 +4,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import Providers from "./providers";
 
+
 import Script from "next/script";
 
 const inter = Inter({
@@ -29,10 +30,7 @@ export default function RootLayout({
           inter.variable
         )}
       >
-        <Providers>
-          {children}
-
-        </Providers>
+        <Providers>{children}</Providers>
 
         {/* Cookiebot */}
         <Script

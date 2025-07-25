@@ -1,11 +1,11 @@
+'use client';
+
 import React from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
-
 import { t, SupportedLocale } from "../i18n";
 import { Linkedin } from "lucide-react";
-
 
 interface ContactProps {
   locale: SupportedLocale;
@@ -15,12 +15,18 @@ const Contact: React.FC<ContactProps> = ({ locale }) => {
   const formSchema = z.object({
     name: z.string().min(1, t(locale, "contact.nameRequired")),
     email: z
-      .email(t(locale, "contact.emailInvalid"))
-      .min(1, t(locale, "contact.emailRequired")),
+      .string()
+      .min(1, t(locale, "contact.emailRequired"))
+      .email(t(locale, "contact.emailInvalid")),
     message: z.string().min(10, t(locale, "contact.messageRequired")),
   });
 
-  const form = useForm<z.infer<typeof formSchema>>({
+  const { 
+    register, 
+    handleSubmit, 
+    reset: resetForm,
+    formState: { errors, isSubmitting } 
+  } = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
@@ -29,17 +35,10 @@ const Contact: React.FC<ContactProps> = ({ locale }) => {
     },
   });
 
-  const {
-    handleSubmit,
-    register,
-    formState: { errors, isSubmitting },
-  } = form;
-
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     await new Promise((resolve) => setTimeout(resolve, 1000));
     console.log(values);
-    
-    form.reset();
+    resetForm();
   };
 
   return (

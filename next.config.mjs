@@ -1,13 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    output: 'export',
-    basePath: '/website',
-    images: {
-        unoptimized: true,
-    },
-    env: {
-        NEXT_PUBLIC_BASE_PATH: '/website',
-    },
+  images: {
+    unoptimized: true,
+  },
 };
 
 export default nextConfig;

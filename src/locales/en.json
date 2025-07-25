@@ -10,19 +10,13 @@
     "cta": "Get Started"
   },
   "caseStudies": {
-    "title": "Case Studies",
+    "title": "Use Cases",
     "description": "Explore how we've helped our partners overcome challenges and achieve their goals through innovative AI solutions.",
-    "study1": {
-      "title": "Predictive Analytics in Drug Discovery",
-      "description": "Accelerated drug discovery timelines by 30% for a leading pharmaceutical company using predictive modeling."
+    "products": {
+      "title": "Products"
     },
-    "study2": {
-      "title": "AI-Powered Diagnostic Imaging",
-      "description": "Improved diagnostic accuracy by 25% in a clinical setting through our advanced image analysis platform."
-    },
-    "study3": {
-      "title": "Genomic Data Interpretation",
-      "description": "Enabled a biotech startup to identify novel biomarkers by interpreting complex genomic datasets."
+    "research": {
+      "title": "Research"
     }
   },
   "contact": {

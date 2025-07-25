@@ -10,19 +10,13 @@
     "cta": "Inizia Ora"
   },
   "caseStudies": {
-    "title": "Casi di Studio",
+    "title": "Casi d'Uso",
     "description": "Scopri come abbiamo aiutato i nostri partner a superare le sfide e raggiungere i loro obiettivi attraverso soluzioni IA innovative.",
-    "study1": {
-      "title": "Analisi Predittiva nella Scoperta di Farmaci",
-      "description": "Accelerazione delle tempistiche di scoperta dei farmaci del 30% per un'azienda farmaceutica leader utilizzando modelli predittivi."
+    "products": {
+      "title": "Prodotti"
     },
-    "study2": {
-      "title": "Diagnostica per Immagini Potenziata dall'IA",
-      "description": "Miglioramento dell'accuratezza diagnostica del 25% in ambito clinico attraverso la nostra piattaforma avanzata di analisi delle immagini."
-    },
-    "study3": {
-      "title": "Interpretazione dei Dati Genomici",
-      "description": "Abbiamo permesso a una startup biotech di identificare nuovi biomarcatori interpretando complessi set di dati genomici."
+    "research": {
+      "title": "Ricerca"
     }
   },
   "contact": {

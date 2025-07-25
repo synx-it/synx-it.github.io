@@ -3,6 +3,11 @@ import it from './locales/it.json';
 
 export type SupportedLocale = 'en' | 'it';
 
+export const i18n = {
+  locales: ['en', 'it'],
+  defaultLocale: 'en',
+};
+
 export const translations = {
   en,
   it,

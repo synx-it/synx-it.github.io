@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 import { t, SupportedLocale } from "../i18n";
 
@@ -22,16 +23,18 @@ const Header: React.FC<HeaderProps> = ({ locale }) => {
     <header className={`sticky top-0 z-50 w-full transition-all duration-300 ${isScrolled ? 'bg-white/80 backdrop-blur-sm shadow-md' : 'bg-transparent'}`}>
       <div className="container mx-auto px-4 py-2 flex items-center justify-between">
         <div className="flex items-center">
-          <div className="relative h-16 w-40"> {/* Container for the logo */}
-            <Image
-              src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/logo_bg.png`}
-              alt="SynX Logo"
-              fill
-              sizes="160px"
-              style={{ objectFit: "contain" }} // Maintain aspect ratio
-              priority
-            />
-          </div>
+          <Link href={`/website/${locale}`} aria-label="Back to homepage">
+            <div className="relative h-16 w-40"> {/* Container for the logo */}
+              <Image
+                src="/logo_bg.png"
+                alt="SynX Logo"
+                fill
+                sizes="160px"
+                style={{ objectFit: "contain" }} // Maintain aspect ratio
+                priority
+              />
+            </div>
+          </Link>
         </div>
         <div className="hidden md:flex items-center space-x-6">
           <nav className="flex items-center space-x-6">
