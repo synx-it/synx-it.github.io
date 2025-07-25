@@ -1,9 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  images: {
-    unoptimized: true,
-  },
-  output: 'export',
+  output: "export",  // <=== enables static exports
+  reactStrictMode: true,
+  basePath: "/website",
 };
 
 export default nextConfig;
