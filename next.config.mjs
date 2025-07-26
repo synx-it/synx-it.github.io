@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const isProd = process.env.NODE_ENV === 'production';
-// Deploy to /website subdirectory of GitHub Pages site
-const basePath = '/website';
-const assetPrefix = '/website';
+// App directory already includes /website in routing, so no basePath needed
+const basePath = '';
+const assetPrefix = '';
 
 const nextConfig = {
   output: 'export',
@@ -24,7 +24,7 @@ const nextConfig = {
     // Add support for static export
     config.output = {
       ...config.output,
-      publicPath: '/website/_next/',
+      publicPath: '/_next/',
     };
     return config;
   },
