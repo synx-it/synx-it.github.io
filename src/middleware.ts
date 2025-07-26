@@ -1,14 +1,12 @@
-import { NextResponse } from 'next/server';
-import type { NextRequest } from 'next/server';
-
-import { i18n } from './i18n';
+import { NextRequest, NextResponse } from 'next/server';
 
 export function middleware(request: NextRequest) {
-  const { pathname } = request.nextUrl;
-
-  // If the request is for the root, redirect to the default locale's website homepage.
-  if (pathname === '/') {
-    return NextResponse.redirect(new URL(`/${i18n.defaultLocale}`, request.url));
+  const url = request.nextUrl.clone();
+  
+  // Redirect root to default locale with website prefix
+  if (url.pathname === '/website/' || url.pathname === '/') {
+    url.pathname = '/website/en';
+    return NextResponse.redirect(url);
   }
 
   return NextResponse.next();

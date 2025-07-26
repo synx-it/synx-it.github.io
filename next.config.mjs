@@ -1,15 +1,12 @@
 /** @type {import('next').NextConfig} */
 const isProd = process.env.NODE_ENV === 'production';
-// For GitHub Pages deployment, serve from root since repo is named 'website'
-const basePath = '';
-const assetPrefix = '';
 
 const nextConfig = {
   output: 'export',
   reactStrictMode: true,
-  // Remove basePath for root deployment
-  basePath,
-  assetPrefix,
+  // Set basePath for /website subdirectory deployment
+  basePath: '/website',
+  assetPrefix: '/website',
 
   // Ensure images are handled correctly in static 
   // export
@@ -22,10 +19,10 @@ const nextConfig = {
 
   // Optional: Add webpack configuration for static export
   webpack: (config) => {
-    // Add support for static export
+    // Add support for static export with website prefix
     config.output = {
       ...config.output,
-      publicPath: '/_next/',
+      publicPath: '/website/_next/',
     };
     return config;
   },
