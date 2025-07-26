@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useEffect } from "react";
-import Providers from "../../providers";
-import MainLayout from "../../main-layout";
+import Providers from '../providers';
+import MainLayout from '../main-layout';
 import { SupportedLocale } from "@/i18n";
 
 // Type for the params prop

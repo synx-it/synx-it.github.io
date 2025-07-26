@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const isProd = process.env.NODE_ENV === 'production';
-// App directory already includes /website in routing, so no basePath needed
+// For GitHub Pages deployment, use /website as base path since repo is named 'website'
 const basePath = '';
 const assetPrefix = '';
 
