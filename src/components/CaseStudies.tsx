@@ -15,7 +15,7 @@ interface CaseStudiesProps {
 const CaseStudies: React.FC<CaseStudiesProps> = ({ locale, productArticles, researchArticles }) => {
 
   const renderArticle = (article: Article, category: 'products' | 'research', icon: React.ReactNode) => (
-    <Link href={`/website/${locale}/${category}/${article.slug}`} key={article.slug}>
+    <Link href={`/${locale}/${category}/${article.slug}`} key={article.slug}>
       <div className="bg-white rounded-lg border border-gray-200 p-8 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 flex flex-col h-full cursor-pointer">
         <div className="w-8 h-8 text-primary mb-4">{icon}</div>
         <h3 className="text-2xl font-bold text-secondary-foreground mb-2">{article.frontmatter.title}</h3>
