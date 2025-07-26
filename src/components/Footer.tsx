@@ -22,7 +22,7 @@ const Footer: React.FC<FooterProps> = ({ locale }) => {
 
   const handleLocaleChange = (newLocale: string) => {
     // Get the current path without the locale and hash
-    const pathWithoutLocale = pathname.replace(new RegExp(`^/website/${locale}(/|$)`), '/');
+    const pathWithoutLocale = pathname.replace(new RegExp(`^/${locale}(/|$)`), '/');
     const [pathWithoutHash, hash = ''] = pathWithoutLocale.split('#');
     
     // Construct the new URL with the new locale and preserve the hash if it exists
@@ -32,7 +32,7 @@ const Footer: React.FC<FooterProps> = ({ locale }) => {
     }
     
     // Use replace instead of push to prevent adding a new history entry
-    router.replace(`/website/${newLocale}${newPath}`);
+    router.replace(`/${newLocale}${newPath}`);
   };
   return (
     <footer className="bg-white border-t border-gray-200 py-8">

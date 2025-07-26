@@ -23,7 +23,7 @@ const Header: React.FC<HeaderProps> = ({ locale }) => {
     <header className={`sticky top-0 z-50 w-full transition-all duration-300 ${isScrolled ? 'bg-white/80 backdrop-blur-sm shadow-md' : 'bg-transparent'}`}>
       <div className="container mx-auto px-4 py-2 flex items-center justify-between">
         <div className="flex items-center">
-          <Link href={`/website/${locale}`} aria-label="Back to homepage">
+          <Link href={`/${locale}`} aria-label="Back to homepage">
             <div className="relative h-16 w-40"> {/* Container for the logo */}
               <Image
                 src="/logo_bg.png"
