@@ -26,7 +26,7 @@ const Header: React.FC<HeaderProps> = ({ locale }) => {
           <Link href={`/${locale}`} aria-label="Back to homepage">
             <div className="relative h-16 w-40"> {/* Container for the logo */}
               <Image
-                src="/logo_bg.png"
+                src="/website/logo_bg.png"
                 alt="SynX Logo"
                 fill
                 sizes="160px"

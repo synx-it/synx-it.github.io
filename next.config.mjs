@@ -13,6 +13,11 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  
+  // Set environment variable for image paths
+  env: {
+    NEXT_PUBLIC_BASE_PATH: '/website',
+  },
 
   // Add trailing slash for better compatibility with GitHub Pages
   trailingSlash: true,
