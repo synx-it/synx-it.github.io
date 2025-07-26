@@ -8,7 +8,7 @@ export function middleware(request: NextRequest) {
 
   // If the request is for the root, redirect to the default locale's website homepage.
   if (pathname === '/') {
-    return NextResponse.redirect(new URL(`/${i18n.defaultLocale}`, request.url));
+    return NextResponse.redirect(new URL(`/website/${i18n.defaultLocale}`, request.url));
   }
 
   return NextResponse.next();
