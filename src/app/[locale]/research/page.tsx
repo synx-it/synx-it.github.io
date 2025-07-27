@@ -79,7 +79,7 @@ export default async function ResearchPage({
                 href={`/website/${locale}/articles`}
                 className="hover:text-primary transition-colors"
               >
-                All Articles
+                {t(locale, "articles.title")}
               </a>
             </li>
             <li>
@@ -91,7 +91,7 @@ export default async function ResearchPage({
                 />
               </svg>
             </li>
-            <li className="text-slate-900 font-bold">Research</li>
+            <li className="text-slate-900 font-bold">{t(locale, "caseStudies.research.title")}</li>
           </ol>
         </nav>
 

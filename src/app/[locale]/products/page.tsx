@@ -79,7 +79,7 @@ export default async function ProductsPage({
                 href={`/website/${locale}/articles`}
                 className="hover:text-primary transition-colors"
               >
-                All Articles
+                {t(locale, "articles.title")}
               </a>
             </li>
             <li>
@@ -91,7 +91,7 @@ export default async function ProductsPage({
                 />
               </svg>
             </li>
-            <li className="text-slate-900 font-bold">Products</li>
+            <li className="text-slate-900 font-bold">{t(locale, "caseStudies.products.title")}</li>
           </ol>
         </nav>
 

@@ -1,6 +1,7 @@
 import { getArticle, getSortedArticles, markdownToHtml } from "@/lib/articles";
 import { notFound } from "next/navigation";
 import { i18n, type SupportedLocale } from "@/i18n";
+import { t } from "@/i18n";
 import { Metadata } from "next";
 
 export async function generateStaticParams() {
@@ -145,15 +146,11 @@ export default async function ArticlePage({
                 href={`/website/${locale}/articles`}
                 className="hover:text-primary transition-colors"
               >
-                All Articles
+                {t(locale, "articles.title")}
               </a>
             </li>
             <li>
-              <svg
-                className="w-4 h-4"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-              >
+              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                 <path
                   fillRule="evenodd"
                   d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
@@ -166,15 +163,11 @@ export default async function ArticlePage({
                 href={`/website/${locale}/research`}
                 className="hover:text-primary transition-colors"
               >
-                Research
+                {t(locale, "caseStudies.research.title")}
               </a>
             </li>
             <li>
-              <svg
-                className="w-4 h-4"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-              >
+              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                 <path
                   fillRule="evenodd"
                   d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
@@ -182,24 +175,16 @@ export default async function ArticlePage({
                 />
               </svg>
             </li>
-            <li
-              className="text-slate-900 font-bold truncate max-w-xs"
-            >
+            <li className="text-slate-900 font-bold truncate max-w-xs">
               {article.frontmatter.title}
             </li>
           </ol>
         </nav>
 
-        <article
-          className="mx-auto max-w-4xl bg-white rounded-2xl shadow-xl p-8 md:p-12"
-        >
+        <article className="mx-auto max-w-4xl bg-white rounded-2xl shadow-xl p-8 md:p-12">
           {/* Article Header */}
           <header className="mb-8 pb-8 border-b border-slate-200">
             <div className="flex items-center gap-2 text-sm text-slate-500 mb-4">
-              <span className="bg-secondary/10 text-secondary px-3 py-1 rounded-full font-medium">
-                Research
-              </span>
-              <span>•</span>
               <time dateTime={article.frontmatter.date}>
                 {new Date(article.frontmatter.date).toLocaleDateString(
                   locale === "it" ? "it-IT" : "en-US",
