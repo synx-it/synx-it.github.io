@@ -5,8 +5,8 @@ const nextConfig = {
   output: 'export',
   reactStrictMode: true,
   // Set basePath for /website subdirectory deployment
-  basePath: '/',
-  assetPrefix: '/ ',
+  basePath: '',
+  assetPrefix: '',
 
   // Ensure images are handled correctly in static 
   // export
