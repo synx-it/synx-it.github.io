@@ -5,7 +5,7 @@ import { getSortedArticles } from '@/lib/articles';
 export const dynamic = 'force-static';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = 'https://synx-it.github.io/website';
+  const baseUrl = 'https://synxai.it';
   
   // Get all articles for dynamic URLs
   const allArticles = await Promise.all(

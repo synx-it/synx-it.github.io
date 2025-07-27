@@ -128,7 +128,7 @@ export default async function ArticlePage({
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `/website/${locale}/research/${slug}`,
+      "@id": `/${locale}/research/${slug}`,
     },
   };
 
@@ -143,7 +143,7 @@ export default async function ArticlePage({
           <ol className="flex items-center space-x-2 text-sm text-slate-700 font-medium">
             <li>
               <a
-                href={`/website/${locale}/articles`}
+                href={`/${locale}/articles`}
                 className="hover:text-primary transition-colors"
               >
                 {t(locale, "articles.title")}
@@ -160,7 +160,7 @@ export default async function ArticlePage({
             </li>
             <li>
               <a
-                href={`/website/${locale}/research`}
+                href={`/${locale}/research`}
                 className="hover:text-primary transition-colors"
               >
                 {t(locale, "caseStudies.research.title")}

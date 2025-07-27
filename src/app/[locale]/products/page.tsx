@@ -76,7 +76,7 @@ export default async function ProductsPage({
           <ol className="flex items-center space-x-2 text-sm text-slate-700 font-medium">
             <li>
               <a
-                href={`/website/${locale}/articles`}
+                href={`/${locale}/articles`}
                 className="hover:text-primary transition-colors"
               >
                 {t(locale, "articles.title")}
@@ -160,7 +160,7 @@ function ArticleCard({ article, locale }: ArticleCardProps) {
       <div className="aspect-video bg-gradient-to-br from-slate-100 to-slate-200 relative overflow-hidden">
         {article.frontmatter.image && (
           <Image
-            src={`/website/${article.frontmatter.image}`}
+            src={`/${article.frontmatter.image}`}
             alt={article.frontmatter.title}
             fill
             className="object-cover group-hover:scale-105 transition-transform duration-300"

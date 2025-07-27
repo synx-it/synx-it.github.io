@@ -4,7 +4,6 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import Providers from "./providers";
 
-
 import Script from "next/script";
 
 const inter = Inter({
@@ -15,9 +14,10 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: {
     default: "SynX - Biomedical AI Innovation",
-    template: "%s | SynX"
+    template: "%s | SynX",
   },
-  description: "Revolutionizing healthcare through cutting-edge AI and machine learning solutions. SynX delivers innovative biomedical technologies that transform patient care and medical research.",
+  description:
+    "Revolutionizing healthcare through cutting-edge AI and machine learning solutions. SynX delivers innovative biomedical technologies that transform patient care and medical research.",
   keywords: [
     "SynX",
     "biomedical AI",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     "biomedical research",
     "healthcare solutions",
     "medical AI",
-    "biomedical engineering"
+    "biomedical engineering",
   ],
   authors: [{ name: "SynX Team" }],
   creator: "SynX",
@@ -38,13 +38,16 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || "https://synx-it.github.io"),
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_BASE_URL || "https://synxai.it"
+  ),
   alternates: {
     canonical: "/",
   },
   openGraph: {
     title: "SynX - Biomedical AI Innovation",
-    description: "Revolutionizing healthcare through cutting-edge AI and machine learning solutions.",
+    description:
+      "Revolutionizing healthcare through cutting-edge AI and machine learning solutions.",
     url: "/",
     siteName: "SynX",
     images: [
@@ -53,7 +56,7 @@ export const metadata: Metadata = {
         width: 1200,
         height: 630,
         alt: "SynX - Biomedical AI Innovation",
-      }
+      },
     ],
     locale: "en_US",
     type: "website",
@@ -61,7 +64,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "SynX - Biomedical AI Innovation",
-    description: "Revolutionizing healthcare through cutting-edge AI and machine learning solutions.",
+    description:
+      "Revolutionizing healthcare through cutting-edge AI and machine learning solutions.",
     images: ["/logo_bg.png"],
   },
   robots: {

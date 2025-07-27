@@ -41,7 +41,7 @@ async function ArticlesPageContent({ locale }: { locale: SupportedLocale }) {
           <section className="mb-16">
             <div className="flex items-center justify-between mb-8">
               <h2 className="text-3xl font-bold text-slate-900 hover:text-primary transition-colors cursor-pointer group">
-                <a href={`/website/${locale}/products`} className="flex items-center group">
+                <a href={`/${locale}/products`} className="flex items-center group">
                   {t(locale, "articles.products")}
                   <svg className="w-5 h-5 ml-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -73,7 +73,7 @@ async function ArticlesPageContent({ locale }: { locale: SupportedLocale }) {
           <section>
             <div className="flex items-center justify-between mb-8">
               <h2 className="text-3xl font-bold text-slate-900 hover:text-primary transition-colors cursor-pointer group">
-                <a href={`/website/${locale}/research`} className="flex items-center group">
+                <a href={`/${locale}/research`} className="flex items-center group">
                   {t(locale, "articles.research")}
                   <svg className="w-5 h-5 ml-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -148,20 +148,9 @@ interface ArticleCardProps {
 }
 
 function ArticleCard({ article, type, locale }: ArticleCardProps) {
-  const typeColors = {
-    product: {
-      bg: "bg-primary/10",
-      text: "text-primary",
-      border: "border-primary/20",
-    },
-    research: {
-      bg: "bg-secondary/10",
-      text: "text-secondary",
-      border: "border-secondary/20",
-    },
-  };
 
-  const colors = typeColors[type];
+
+
 
   return (
     <Link
@@ -173,7 +162,7 @@ function ArticleCard({ article, type, locale }: ArticleCardProps) {
       <div className="aspect-video bg-gradient-to-br from-slate-100 to-slate-200 relative overflow-hidden">
         {article.frontmatter.image && (
           <Image
-            src={`/website/${article.frontmatter.image}`}
+            src={`/${article.frontmatter.image}`}
             alt={article.frontmatter.title}
             fill
             className="object-cover group-hover:scale-105 transition-transform duration-300"

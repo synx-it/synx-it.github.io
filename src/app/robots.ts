@@ -3,7 +3,7 @@ import { MetadataRoute } from 'next';
 export const dynamic = 'force-static';
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = 'https://synx-it.github.io/website';
+  const baseUrl = 'https://synxai.it';
   
   return {
     rules: [
