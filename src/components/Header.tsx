@@ -38,6 +38,12 @@ const Header: React.FC<HeaderProps> = ({ locale }) => {
         </div>
         <div className="hidden md:flex items-center space-x-6">
           <nav className="flex items-center space-x-6">
+            <Link
+              href={`/${locale}/articles`}
+              className="text-base text-gray-600 hover:text-primary font-medium transition-colors"
+            >
+              Articles
+            </Link>
             <a
               href="#case-studies"
               className="text-base text-gray-600 hover:text-primary font-medium transition-colors"

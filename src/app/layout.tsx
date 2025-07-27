@@ -13,8 +13,68 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Synx AI Vision",
-  description: "The description for Synx AI Vision",
+  title: {
+    default: "SynX - Biomedical AI Innovation",
+    template: "%s | SynX"
+  },
+  description: "Revolutionizing healthcare through cutting-edge AI and machine learning solutions. SynX delivers innovative biomedical technologies that transform patient care and medical research.",
+  keywords: [
+    "SynX",
+    "biomedical AI",
+    "healthcare innovation",
+    "machine learning",
+    "medical technology",
+    "AI healthcare",
+    "biomedical research",
+    "healthcare solutions",
+    "medical AI",
+    "biomedical engineering"
+  ],
+  authors: [{ name: "SynX Team" }],
+  creator: "SynX",
+  publisher: "SynX",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || "https://synx-it.github.io"),
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "SynX - Biomedical AI Innovation",
+    description: "Revolutionizing healthcare through cutting-edge AI and machine learning solutions.",
+    url: "/",
+    siteName: "SynX",
+    images: [
+      {
+        url: "/logo_bg.png",
+        width: 1200,
+        height: 630,
+        alt: "SynX - Biomedical AI Innovation",
+      }
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "SynX - Biomedical AI Innovation",
+    description: "Revolutionizing healthcare through cutting-edge AI and machine learning solutions.",
+    images: ["/logo_bg.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 
 export default function RootLayout({

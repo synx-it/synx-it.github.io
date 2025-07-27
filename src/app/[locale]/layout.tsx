@@ -8,7 +8,7 @@ import { SupportedLocale } from "@/i18n";
 // Type for the params prop
 interface WebsiteLayoutProps {
   children: React.ReactNode;
-  params: { locale: SupportedLocale } | Promise<{ locale: SupportedLocale }>;
+  params: Promise<{ locale: SupportedLocale }>;
 }
 
 export default function WebsiteLayout({

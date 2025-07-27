@@ -2,7 +2,8 @@
   "hero": {
     "title": "Potenziare la Sanità, Accelerare la Scoperta",
     "description": "SynX sfrutta l'intelligenza artificiale avanzata e il machine learning per trasformare dati biomedici complessi in insight azionabili, guidando l'innovazione nella ricerca, nella diagnostica e nella cura del paziente. Collabora con noi per sbloccare tutto il potenziale dei tuoi dati e accelerare le scoperte biomediche.",
-    "cta": "Scopri le Nostre Soluzioni"
+    "cta": "Scopri le Nostre Soluzioni",
+    "browseArticles": "Esplora gli Articoli"
   },
   "header": {
     "caseStudies": "Casi di Studio",
@@ -13,10 +14,18 @@
     "title": "Casi d'Uso",
     "description": "Scopri come abbiamo aiutato i nostri partner a superare le sfide e raggiungere i loro obiettivi attraverso soluzioni IA innovative.",
     "products": {
-      "title": "Prodotti"
+      "title": "Prodotti",
+      "badge": "Prodotto"
     },
     "research": {
-      "title": "Ricerca"
+      "title": "Ricerca",
+      "badge": "Ricerca"
+    },
+    "readMore": "Leggi di più",
+    "viewAll": {
+      "title": "Esplora Tutti gli Articoli",
+      "description": "Scopri la nostra collezione completa di insight di ricerca e innovazioni di prodotto in un unico posto.",
+      "button": "Visualizza Tutti gli Articoli"
     }
   },
   "contact": {
@@ -51,5 +60,33 @@
     "terms": "Termini di Servizio",
     "rights": "Tutti i diritti riservati.",
     "selectLanguage": "Seleziona lingua"
+  },
+  "articles": {
+    "title": "Tutti gli Articoli",
+    "description": "Esplora la nostra collezione completa di insight di ricerca e innovazioni di prodotto",
+    "products": "Prodotti",
+    "research": "Ricerca",
+    "product": "Prodotto",
+    "count": "articoli",
+    "countSingular": "articolo",
+    "countPlural": "articoli",
+    "readMore": "Leggi di più",
+    "empty": {
+      "title": "Nessun articolo trovato",
+      "description": "Controlla presto per nuovi contenuti."
+    },
+    "by": "Di",
+    "published": "Pubblicato",
+    "category": "Categoria",
+    "exploreAll": "Esplora Tutti gli Articoli",
+    "exploreDescription": "Scopri la nostra collezione completa di insight di ricerca e innovazioni di prodotto in un unico posto."
+  },
+  "research": {
+    "title": "Insight di Ricerca",
+    "description": "Esplora le nostre ultime scoperte nella ricerca biomedica e le innovazioni guidate dall'IA in ambito sanitario."
+  },
+  "products": {
+    "title": "Innovazioni di Prodotto",
+    "description": "Scopri le nostre soluzioni AI all'avanguardia che trasformano l'assistenza sanitaria e le applicazioni biomediche."
   }
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { t, SupportedLocale } from '../i18n';
 
 
@@ -28,9 +29,17 @@ const Hero: React.FC<HeroProps> = ({ locale = 'en' }) => {
         <p className="text-xl md:text-2xl font-light max-w-3xl mx-auto mb-8">
           {t(locale, 'hero.description')}
         </p>
-        <a href="#case-studies" className="mt-8 bg-primary text-white hover:bg-tertiary transition-colors font-semibold text-lg px-10 py-3 rounded-full">
-          {t(locale, 'hero.cta')}
-        </a>
+        <div className="flex flex-col sm:flex-row gap-4 mt-8">
+          <a href="#case-studies" className="bg-primary text-white hover:bg-tertiary transition-colors font-semibold text-lg px-10 py-3 rounded-full">
+            {t(locale, 'hero.cta')}
+          </a>
+          <Link 
+            href={`/${locale}/articles`}
+            className="border-2 border-primary text-primary hover:bg-primary hover:text-white transition-colors font-semibold text-lg px-10 py-3 rounded-full"
+          >
+            {t(locale, 'hero.browseArticles')}
+          </Link>
+        </div>
       </div>
     </section>
   );

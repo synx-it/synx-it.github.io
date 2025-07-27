@@ -2,7 +2,8 @@
   "hero": {
     "title": "Empowering Healthcare, Accelerating Discovery",
     "description": "SynX leverages advanced AI and machine learning to transform complex biomedical data into actionable insights, driving innovation in research, diagnostics, and patient care. Partner with us to unlock the full potential of your data and accelerate biomedical breakthroughs.",
-    "cta": "Discover Our Solutions"
+    "cta": "Discover Our Solutions",
+    "browseArticles": "Browse Articles"
   },
   "header": {
     "caseStudies": "Case Studies",
@@ -13,10 +14,18 @@
     "title": "Use Cases",
     "description": "Explore how we've helped our partners overcome challenges and achieve their goals through innovative AI solutions.",
     "products": {
-      "title": "Products"
+      "title": "Products",
+      "badge": "Product"
     },
     "research": {
-      "title": "Research"
+      "title": "Research",
+      "badge": "Research"
+    },
+    "readMore": "Read more",
+    "viewAll": {
+      "title": "Explore All Articles",
+      "description": "Discover our complete collection of research insights and product innovations in one place.",
+      "button": "View All Articles"
     }
   },
   "contact": {
@@ -51,5 +60,33 @@
     "terms": "Terms of Service",
     "rights": "All Rights Reserved.",
     "selectLanguage": "Select language"
+  },
+  "articles": {
+    "title": "All Articles",
+    "description": "Explore our comprehensive collection of research insights and product innovations",
+    "products": "Products",
+    "research": "Research",
+    "product": "Product",
+    "count": "articles",
+    "countSingular": "article",
+    "countPlural": "articles",
+    "readMore": "Read more",
+    "empty": {
+      "title": "No articles found",
+      "description": "Check back soon for new content."
+    },
+    "by": "By",
+    "published": "Published",
+    "category": "Category",
+    "exploreAll": "Explore All Articles",
+    "exploreDescription": "Discover our complete collection of research insights and product innovations in one place."
+  },
+  "research": {
+    "title": "Research Insights",
+    "description": "Explore our latest biomedical research breakthroughs and AI-driven discoveries in healthcare."
+  },
+  "products": {
+    "title": "Product Innovations",
+    "description": "Discover our cutting-edge AI solutions transforming healthcare and biomedical applications."
   }
 }
