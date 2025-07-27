@@ -5,18 +5,18 @@ const nextConfig = {
   output: 'export',
   reactStrictMode: true,
   // Set basePath for /website subdirectory deployment
-  basePath: '/website',
-  assetPrefix: '/website',
+  basePath: '/',
+  assetPrefix: '/ ',
 
   // Ensure images are handled correctly in static 
   // export
   images: {
     unoptimized: true,
   },
-  
+
   // Set environment variable for image paths
   env: {
-    NEXT_PUBLIC_BASE_PATH: '/website',
+    NEXT_PUBLIC_BASE_PATH: '/',
   },
 
   // Add trailing slash for better compatibility with GitHub Pages
@@ -27,7 +27,7 @@ const nextConfig = {
     // Add support for static export with website prefix
     config.output = {
       ...config.output,
-      publicPath: '/website/_next/',
+      publicPath: '/_next/',
     };
     return config;
   },

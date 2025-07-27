@@ -16,13 +16,7 @@ const CaseStudies: React.FC<CaseStudiesProps> = ({
   productArticles,
   researchArticles,
 }) => {
-  console.log('CaseStudies Debug:', {
-    locale,
-    productArticles: productArticles.length,
-    researchArticles: researchArticles.length,
-    productArticlesData: productArticles,
-    researchArticlesData: researchArticles
-  });
+
   const renderArticle = (
     article: Article,
     category: "products" | "research"
