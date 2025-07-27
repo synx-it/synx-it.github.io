@@ -1,11 +1,13 @@
 'use client';
 
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { t, SupportedLocale } from "../i18n";
 import { Linkedin } from "lucide-react";
+import emailjs from '@emailjs/browser';
+import { emailjsConfig, isEmailjsConfigured } from "../config/emailjs";
 
 interface ContactProps {
   locale: SupportedLocale;
@@ -21,11 +23,14 @@ const Contact: React.FC<ContactProps> = ({ locale }) => {
     message: z.string().min(10, t(locale, "contact.messageRequired")),
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
   const { 
     register, 
     handleSubmit, 
     reset: resetForm,
-    formState: { errors, isSubmitting } 
+    formState: { errors } 
   } = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -36,9 +41,36 @@ const Contact: React.FC<ContactProps> = ({ locale }) => {
   });
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    console.log(values);
-    resetForm();
+    if (!isEmailjsConfigured) {
+      alert('Contact form is not configured. Please check environment variables.');
+      return;
+    }
+
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    try {
+      await emailjs.send(
+        emailjsConfig.serviceId,
+        emailjsConfig.templateId,
+        values,
+        emailjsConfig.publicKey
+      );
+      
+      setSubmitStatus('success');
+      resetForm();
+      
+      // Reset status after 3 seconds
+      setTimeout(() => setSubmitStatus('idle'), 3000);
+    } catch (error) {
+      console.error('Email send error:', error);
+      setSubmitStatus('error');
+      
+      // Reset status after 3 seconds
+      setTimeout(() => setSubmitStatus('idle'), 3000);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -123,6 +155,25 @@ const Contact: React.FC<ContactProps> = ({ locale }) => {
                 ? t(locale, "contact.sending")
                 : t(locale, "contact.sendMessage")}
             </button>
+            
+            {submitStatus === 'success' && (
+              <div className="mt-4 p-3 bg-green-100 border border-green-400 text-green-700 rounded text-center">
+                {t(locale, "contact.success")}
+              </div>
+            )}
+            
+            {submitStatus === 'error' && (
+              <div className="mt-4 p-3 bg-red-100 border border-red-400 text-red-700 rounded text-center">
+                {t(locale, "contact.error")}
+              </div>
+            )}
+            
+            {!isEmailjsConfigured && (
+              <div className="mt-4 p-3 bg-yellow-100 border border-yellow-400 text-yellow-700 rounded text-center">
+                Contact form not configured. Please check environment variables.
+              </div>
+            )}
+            
             <p className="text-sm text-gray-500 mt-4 text-center">
               {t(locale, "contact.privacy")}
             </p>

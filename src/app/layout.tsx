@@ -3,8 +3,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import Providers from "./providers";
-
 import Script from "next/script";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -105,19 +105,8 @@ export default function RootLayout({
           async
         />
 
-        {/* Google tag (gtag.js) */}
-        <Script
-          strategy="afterInteractive"
-          src="https://www.googletagmanager.com/gtag/js?id=G-4PZ4YDLPW2"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-4PZ4YDLPW2');
-          `}
-        </Script>
+        {/* Google Analytics */}
+        <GoogleAnalytics gaId="G-4PZ4YDLPW2" />
       </body>
     </html>
   );
