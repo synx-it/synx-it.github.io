@@ -16,7 +16,7 @@ const nextConfig = {
 
   // Set environment variable for image paths
   env: {
-    NEXT_PUBLIC_BASE_PATH: '/',
+    NEXT_PUBLIC_BASE_PATH: '',
   },
 
   // Add trailing slash for better compatibility with GitHub Pages
