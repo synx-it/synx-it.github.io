@@ -15,18 +15,24 @@ const Header: React.FC<HeaderProps> = ({ locale }) => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <header className={`sticky top-0 z-50 w-full transition-all duration-300 ${isScrolled ? 'bg-white/80 backdrop-blur-sm shadow-md' : 'bg-transparent'}`}>
+    <header
+      className={`sticky top-0 z-50 w-full transition-all duration-300 ${
+        isScrolled ? "bg-white/80 backdrop-blur-sm shadow-md" : "bg-transparent"
+      }`}
+    >
       <div className="container mx-auto px-4 py-2 flex items-center justify-between">
         <div className="flex items-center">
           <Link href={`/${locale}`} aria-label="Back to homepage">
-            <div className="relative h-16 w-40"> {/* Container for the logo */}
+            <div className="relative h-16 w-40">
+              {" "}
+              {/* Container for the logo */}
               <Image
-                src="/website/logo_bg.png"
+                src="/logo_bg.png"
                 alt="SynX Logo"
                 fill
                 sizes="160px"
@@ -38,7 +44,6 @@ const Header: React.FC<HeaderProps> = ({ locale }) => {
         </div>
         <div className="hidden md:flex items-center space-x-6">
           <nav className="flex items-center space-x-6">
-
             <Link
               href={`/${locale}#case-studies`}
               className="text-base text-gray-600 hover:text-primary font-medium transition-colors"
@@ -52,7 +57,10 @@ const Header: React.FC<HeaderProps> = ({ locale }) => {
               {t(locale, "header.contact")}
             </Link>
           </nav>
-          <Link href={`/${locale}#contact`} className="bg-primary text-white hover:bg-tertiary font-medium transition-colors text-base rounded-full px-6 py-2">
+          <Link
+            href={`/${locale}#contact`}
+            className="bg-primary text-white hover:bg-tertiary font-medium transition-colors text-base rounded-full px-6 py-2"
+          >
             {t(locale, "header.cta")}
           </Link>
         </div>
